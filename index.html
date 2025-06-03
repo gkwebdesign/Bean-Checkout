@@ -1,259 +1,252 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Bean Machine Shopping Cart</title>
-        <meta name="description">
-        <link rel="stylesheet" href="style.css"/>
-        <script src="app.js" async></script>
-    </head>
-      <body>
-        <section class="headerforimage">
-            <div class="headerimage">
-                <img src="https://i.ibb.co/cb7DWGQ/Bean-Machine-Coffee.webp" alt="Bean-Machine-Coffee" border="0">
-            </div>
-        </section>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanic Shop Checkout</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #sidebar.hidden { display: none; }
+    #sidebarToggleReopen {
+      position: fixed;
+      top: auto; bottom: 1rem;
+      left: 50%; transform: translateX(-50%);
+      z-index: 50;
+    }
+    @media (min-width: 769px) {
+      #sidebarToggleReopen {
+        top: 1rem;
+        bottom: auto;
+        left: auto;
+        right: 1rem;
+        transform: none;
+      }
+    }
+    @media (max-width: 768px) {
+      #sidebarToggleReopen {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+      }
+      #sidebar {
+        max-height: 40vh !important;
+      }
+    }
+    #sidebarToggleReopen:hover {
+      background-color: #2C1907;
+      transform: scale(1.05);
+      transition: all 0.2s;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+  <div class="flex flex-col items-start px-6 py-4">
+    <img src="https://i.ibb.co/cb7DWGQ/Bean-Machine-Coffee.webp" alt="Otto's Logo" class="max-w-[150px] mb-2">
+  </div>
+  <div class="text-xs flex flex-col items-start px-6 py-4">
+    <p class="font-bold">ROAST & TOAST
+(2x toast, 2x affogato)
 
-        <section class="container content-section">
-            <h2 class="section-header">COMBOS FROM $900</h2>
-            <div style="text-align: center;">
-                <p><b>ROAST & TOAST</b><br/>(2x toast, 2x affogato)</p>
-                <p><b>RISE & GRIND</b><br/>(2x Latte Machiato, 2x Blackberry Muffin, 2x Multivitamin Crush)</p>
-                <p><b>CRUSH & SLUSH</b><br/>(2x Lemon Crush, 2x Multivitamin Crushed Ice, 2x Oreo Muffin, 2x Chocolate Muffin)</p>
-                <p><b>SUGAR RUSH SPECIAL</b><br/>(5x Multivitamin Crushed Ice, 2x Oreo Muffin, 2x Pink Donut, 3x Hot Chocolate)</p>
-                </div>
-            <div class="shop-items">
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">ROAST & TOAST
-                    </span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$900</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ROAST & TOAST - $900</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">RISE & GRIND</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$1300</span>
-                        <button class="btn btn-primary shop-item-button" type="button">RISE & GRIND - $1300</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">CRUSH & SLUSH</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">1700</span>
-                        <button class="btn btn-primary shop-item-button" type="button">CRUSH & SLUSH - $1700</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">SUGAR RUSH SPECIAL</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">2500</span>
-                        <button class="btn btn-primary shop-item-button" type="button">SUGAR RUSH SPECIAL - $2500</button>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
+<p class="font-bold">RISE & GRIND
+(2x Latte Machiato, 2x Blackberry Muffin, 2x Multivitamin Crush)</p>
 
-        <section class="container content-section">
-            <h2 class="section-header">SLUSH FROM $200</h2>
-            <div class="shop-items">
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">LEMON</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$200</span>
-                        <button class="btn btn-primary shop-item-button" type="button">LEMON</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">MULTIVITAMIN</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$250</span>
-                        <button class="btn btn-primary shop-item-button" type="button">MULTIVITAMIN</button>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
+<p class="font-bold">CRUSH & SLUSH
+(2x Lemon Crush, 2x Multivitamin Crushed Ice, 2x Oreo Muffin, 2x Chocolate Muffin)</p>
 
-        <section class="container content-section">
-            <h2 class="section-header">COFFEE $200</h2>
-            <div class="shop-items">
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">AFFOGATO</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$200</span>
-                        <button class="btn btn-primary shop-item-button" type="button">AFFOGATO</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">CAPPUCCINO</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$200</span>
-                        <button class="btn btn-primary shop-item-button"type="button">CAPPUCCINO</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">ESPRESSO</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$200</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ESPRESSO</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">ESPRESSO LUNGO</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$200</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ESPRESSO LUNGO</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">FLAT WHITE</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$200</span>
-                        <button class="btn btn-primary shop-item-button" type="button">FLAT WHITE</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">HOT CHOCOLATE</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$200</span>
-                        <button class="btn btn-primary shop-item-button" type="button">HOT CHOCOLATE</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">IRISH COFFEE</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$200</span>
-                        <button class="btn btn-primary shop-item-button" type="button">IRISH COFFEE</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">LATTE MACCHIATO</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$200</span>
-                        <button class="btn btn-primary shop-item-button" type="button">LATTE MACCHIATO</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">TURKISH COFFEE</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$200</span>
-                        <button class="btn btn-primary shop-item-button" type="button">TURKISH COFFEE</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="container content-section">
-            <h2 class="section-header">DESSERTS $200</h2>
-            <div class="shop-items">
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">BLACKBERRY MUFFIN</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$200</span>
-                        <button class="btn btn-primary shop-item-button" type="button">BLACKBERRY MUFFIN</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">CHOCOLATE DONUT</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$200</span>
-                        <button class="btn btn-primary shop-item-button"type="button">CHOCOLATE DONUT</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">CHOCOLATE MUFFIN</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$200</span>
-                        <button class="btn btn-primary shop-item-button" type="button">CHOCOLATE MUFFIN</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">CLASSIC DONUT</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$200</span>
-                        <button class="btn btn-primary shop-item-button" type="button">CLASSIC DONUT</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">LYCHEE MUFFIN</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$200</span>
-                        <button class="btn btn-primary shop-item-button" type="button">LYCHEE MUFFIN</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">OREO MUFFIN</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$200</span>
-                        <button class="btn btn-primary shop-item-button" type="button">OREO MUFFIN</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">PINK DONUT</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$200</span>
-                        <button class="btn btn-primary shop-item-button" type="button">PINK DONUT</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="container content-section">
-            <h2 class="section-header">SANDWICHES $250</h2>
-            <div class="shop-items">
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">TOAST WITH HAM & CHEESE</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$250</span>
-                        <button class="btn btn-primary shop-item-button" type="button">TOAST WITH HAM & CHEESE</button>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-    
-        <section class="container content-section">
-            <h2 class="section-header">TEA $200</h2>
-            <div class="shop-items">
-                <div class="shop-item">
-                    <span class="shop-item-title" style="display: none;">JASMINE</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price" style="display: none;">$200</span>
-                        <button class="btn btn-primary shop-item-button" type="button">JASMINE</button>
-                    </div>
-                </div>
+<p class="font-bold"></p>SUGAR RUSH SPECIAL
+(5x Multivitamin Crushed Ice, 2x Oreo Muffin, 2x Pink Donut, 3x Hot Chocolate)</p>
+  </div>
+  <button onclick="toggleSidebar(true)" id="sidebarToggleReopen" class="bg-gray-600 text-white px-4 py-2 text-lg rounded hidden block">←</button>
+  <button onclick="toggleSidebar(true)" id="sidebarToggleReopenMobile" class="bg-gray-600 text-white px-4 py-2 text-lg rounded fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 md:hidden hidden">▲</button>
+  <div class="flex flex-col-reverse md:flex-row min-h-screen">
+    <aside id="sidebar" class="bg-gray-800 w-full md:w-72 p-4 transition-all duration-300 fixed bottom-0 left-0 z-40 md:static md:order-2 max-h-[50vh] md:max-h-none overflow-y-auto">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-bold">Checkout List</h2>
+        <button onclick="toggleSidebar(false)" id="sidebarToggle" class="bg-gray-600 text-white px-2 py-1 rounded z-20">⇄</button>
+      </div>
+      <ul id="checkoutList" class="space-y-2"></ul>
+      <div class="mt-4 border-t border-gray-700 pt-4 space-y-2">
+        <label for="alreadyPaid" class="block text-sm">Already Paid</label>
+        <input id="alreadyPaid" type="number" min="0" value="0" class="w-full text-black px-2 py-1 rounded" oninput="renderCart()">
+        <label for="discount" class="block text-sm">Discount %</label>
+        <input id="discount" type="number" min="0" max="100" value="0" class="w-full text-black px-2 py-1 rounded" oninput="renderCart()">
+        <p>Invoices: <span id="totalPrice">$0</span></p>
+        <button onclick="resetCart()" class="bg-red-500 px-3 py-1 rounded w-full">Reset</button>
+        <button onclick="exportReceipt()" class="bg-blue-500 px-3 py-1 rounded w-full">Export Receipt</button>
+      </div>
+    </aside>
 
+    <main class="flex-1 p-6">
+      <div id="itemsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pb-80 md:pb-0"></div>
+    </main>
+  </div>
 
-                
-            </div>
-        </section>
-        
-       
-        <section class="container content-section">
-            <h2 class="section-header">CART</h2>
-            <div class="cart-row">
-                <span class="cart-item cart-header cart-column">ITEM</span>
-                <span class="cart-price cart-header cart-column">PRICE</span>
-                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
-            </div>
-            <div class="cart-items">
-                
-            </div>
+  <div id="receiptModal" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50">
+    <div class="bg-white text-black rounded-lg shadow-lg p-6 w-full max-w-xl">
+      <h2 class="text-xl font-bold mb-4">Receipt</h2>
+      <pre id="receiptText" class="bg-gray-100 p-4 rounded overflow-auto text-sm h-64 whitespace-pre-wrap"></pre>
+      <div class="mt-4 flex justify-between">
+        <button onclick="copyReceipt()" class="bg-green-600 text-white px-4 py-2 rounded">Copy Receipt</button>
+        <button onclick="closeReceipt()" class="bg-black text-white px-4 py-2 rounded">Close</button>
+      </div>
+    </div>
+  </div>
 
-            <!-- Discount Container -->
-        <div class="discount-container">
-            <label for="discount">Discount (%): </label>
-            <input type="number" id="discount" value="0" min="0" max="100">
-        </div>
+  <script>
+    const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRaHtFSAzgN2NAmH-CTUWbm-ckZsbfvs2RKCZDnYWDnFavaX-baTcgVaiOL4ohps3LVXv4PkDoOlZMj/pub?output=csv';
+    const categories = {};
+    let cart = [];
 
-            <div class="cart-total">
-                <strong class="cart-total-title">Total</strong>
-                <span class="cart-total-price">$0.00</span>
-            </div>
+    function formatPrice(value) {
+      return "$" + value.toLocaleString("en-US", { maximumFractionDigits: 0 });
+    }
 
-            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
-        </section>
+    function fetchSheetData() {
+      fetch(csvUrl)
+        .then(res => res.text())
+        .then(csv => {
+          const rows = csv.trim().split('\n').map(r => r.split(',').map(cell => cell.trim()));
+          let currentCategory = null;
+          rows.forEach(([item, price]) => {
+            if (item && !price) {
+              currentCategory = item;
+              if (!categories[currentCategory]) categories[currentCategory] = [];
+            } else if (item && price && currentCategory) {
+              const numericPrice = parseInt(price.replace(/[^0-9]/g, ''));
+              if (!isNaN(numericPrice)) {
+                categories[currentCategory].push({ item, price: numericPrice });
+              }
+            }
+          });
+          renderCategories();
+          renderCart();
+        })
+        .catch(err => console.error("Failed to fetch and parse sheet:", err));
+    }
 
-        
-    </body>
+    function renderCategories() {
+      const itemsGrid = document.getElementById("itemsGrid");
+      itemsGrid.innerHTML = '';
+      for (const cat in categories) {
+        const section = document.createElement("div");
+        section.className = "bg-gray-800 rounded";
+
+        const header = document.createElement("div");
+        header.className = "font-bold text-lg px-4 py-2 bg-gray-700 rounded-t";
+        header.textContent = cat;
+
+        const itemWrapper = document.createElement("div");
+        itemWrapper.className = "p-4 space-y-2";
+
+        categories[cat].forEach(({ item, price }) => {
+          const div = document.createElement("div");
+          div.className = "bg-gray-700 p-3 rounded shadow cursor-pointer hover:bg-gray-600";
+          div.innerHTML = `<div class='font-semibold mb-1'>${item}</div><p class='mb-1'>${formatPrice(price)}</p>`;
+          div.onclick = () => addToCart(item, price);
+          itemWrapper.appendChild(div);
+        });
+
+        section.appendChild(header);
+        section.appendChild(itemWrapper);
+        itemsGrid.appendChild(section);
+      }
+    }
+
+    function addToCart(item, price) {
+      const existing = cart.find(entry => entry.item === item);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ item, price, qty: 1 });
+      }
+      renderCart();
+    }
+
+    function renderCart() {
+      const list = document.getElementById("checkoutList");
+      const totalPriceEl = document.getElementById("totalPrice");
+      const discount = parseFloat(document.getElementById("discount").value) || 0;
+      const alreadyPaid = parseFloat(document.getElementById("alreadyPaid").value) || 0;
+
+      list.innerHTML = '';
+      let total = 0;
+
+      cart.forEach(({ item, price, qty }, index) => {
+        const li = document.createElement("li");
+        li.className = "flex justify-between items-center bg-gray-700 p-2 rounded";
+        li.innerHTML = `
+          <div>
+            ${item} - ${formatPrice(price)}<br>
+            <input type="number" min="1" value="${qty}" onchange="updateQty(${index}, this.value)" class="w-16 text-black px-1 rounded mt-1" />
+          </div>
+          <button onclick="removeItem(${index})" class="text-red-400">✕</button>
+        `;
+        total += price * qty;
+        list.appendChild(li);
+      });
+
+      const discounted = total * (1 - discount / 100);
+      const finalTotal = Math.max(discounted - alreadyPaid, 0);
+      totalPriceEl.textContent = formatPrice(finalTotal);
+    }
+
+    function updateQty(index, newQty) {
+      const qty = parseInt(newQty);
+      if (!isNaN(qty) && qty > 0) {
+        cart[index].qty = qty;
+        renderCart();
+      }
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      renderCart();
+    }
+
+    function resetCart() {
+      cart = [];
+      renderCart();
+    }
+
+    function exportReceipt() {
+      const textArea = document.getElementById("receiptText");
+      let text = "🔧 Mechanic Shop Receipt\n\n";
+      let total = 0;
+      const discount = parseFloat(document.getElementById("discount").value) || 0;
+      const alreadyPaid = parseFloat(document.getElementById("alreadyPaid").value) || 0;
+
+      cart.forEach(({ item, price, qty }) => {
+        const lineTotal = price * qty;
+        total += lineTotal;
+        text += `${item} - ${formatPrice(price)} x ${qty} = ${formatPrice(lineTotal)}\n`;
+      });
+
+      const discounted = total * (1 - discount / 100);
+      const finalTotal = Math.max(discounted - alreadyPaid, 0);
+
+      text += `\nDiscount: ${discount}%\nAlready Paid: ${formatPrice(alreadyPaid)}\nInvoices: ${formatPrice(finalTotal)}`;
+      textArea.textContent = text;
+      document.getElementById("receiptModal").classList.remove("hidden");
+    }
+
+    function copyReceipt() {
+      navigator.clipboard.writeText(document.getElementById("receiptText").textContent)
+        .then(() => alert("Receipt copied to clipboard."));
+    }
+
+    function closeReceipt() {
+      document.getElementById("receiptModal").classList.add("hidden");
+    }
+
+    function toggleSidebar(show) {
+      const sidebar = document.getElementById("sidebar");
+      const sidebarToggleReopen = document.getElementById("sidebarToggleReopen");
+      const sidebarToggleReopenMobile = document.getElementById("sidebarToggleReopenMobile");
+      sidebar.classList.toggle("hidden", !show);
+      sidebarToggleReopen.classList.toggle("hidden", show);
+      sidebarToggleReopenMobile.classList.toggle("hidden", show);
+    }
+
+    fetchSheetData();
+  </script>
+</body>
 </html>
